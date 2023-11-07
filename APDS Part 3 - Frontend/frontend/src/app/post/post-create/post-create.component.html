@@ -1,0 +1,62 @@
+<form (submit)="onaddPost(addPost)" #addPost="ngForm">
+    <input
+    type="text"
+    ngModel name="enteredID"
+    placeholder="Post ID"
+    required
+    minlength="1"
+    pattern="^\d$"
+    #enteredID="ngModel"/>
+    <div style="color: red;" *ngIf="enteredID.invalid && (enteredID.dirty || enteredID.touched)">Only numbers are accepted, no symbols and no letters</div>
+    <br>
+    
+    <input
+    type="text"
+    ngModel name="enteredSubject"
+    placeholder="Post Subject"
+    required
+    minlength="1"
+    pattern="^[a-zA-Z0-9\s_-]+$"
+    #enteredSubject="ngModel"/>
+
+    <input
+    type="text"
+    ngModel name="enteredDescription"
+    placeholder="Post Description"
+    required
+    minlength="1"
+    pattern="^[a-zA-Z0-9\s_-]+$"
+    #enteredDescription="ngModel"/>
+
+    <input
+    type="text"
+    ngModel name="enteredDepartment"
+    placeholder="Post Department"
+    required
+    minlength="1"
+    pattern="^[a-zA-Z0-9\s_-]+$"
+    #enteredDepartment="ngModel"/>
+
+    <input
+    type="text"
+    ngModel name="enteredProvince"
+    placeholder="Post Province"
+    required
+    minlength="1"
+    pattern="^[a-zA-Z0-9\s_-]+$"
+    #enteredProvince="ngModel"/>
+
+    <input
+    type="text"
+    ngModel name="enteredDate"
+    placeholder="Post Date"
+    required
+    minlength="1"
+    pattern="^\d{4}-\d{2}-\d{2}$"
+    #enteredDate="ngModel"/>
+    <div style="color: red;" *ngIf="enteredDate.invalid && (enteredDate.dirty || enteredDate.touched)">must be a valid date format, i.e. yyyy-mm-dd</div>
+    <div style="color: red;" *ngIf="errorMessage">{{ errorMessage }}</div>
+    <br>
+
+    <button type="submit">Add Post</button>   
+</form>

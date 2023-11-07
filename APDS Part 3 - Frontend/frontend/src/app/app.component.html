@@ -1,0 +1,67 @@
+<body>
+        <header>
+            <div>
+                <a href="/home"><img src="../assets/img/logo.webp"></a>
+            </div>
+
+            <div class="nav-bar">
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="">Menu</a>
+                            <ul>
+                                <a href="/login"> Login</a>
+                                <a href="/signup"> Register</a>
+                                <a href="/list"> List Item</a>
+                                <a href="/add"> Add Item</a>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <main>
+            <div class="welcome-left">
+                <div>
+                    <hr class="style">
+
+                    <h1>Welcome to Government Issue Tracker</h1>
+
+                    <p>
+                        A place that will allow to track all issues within the government department.
+                        <br><br>
+                        To help make South Africa a better place.
+                        <br><br>
+                        <router-outlet></router-outlet>
+                    </p>
+                    
+
+                    
+				</div>
+			</div>
+
+			<div class="welcome-right" >
+                <div class="top-right">
+
+                </div>
+
+                <div class="bottom-right">
+                    <section class="feature">
+                        <div class="feature-block">
+                            <a href="/login">Login</a>			
+                        </div>
+                    
+                        <div class="feature-block">
+                            <a href="/signup">Sign Up</a>			
+                        </div>
+                        <div class="feature-block">
+                            <a href="/list">View Issues</a>			
+                        </div>
+                        <div class="feature-block">
+                            <a href="/add">Add Issue</a>			
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </body>

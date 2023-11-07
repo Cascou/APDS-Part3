@@ -1,0 +1,40 @@
+input{
+    display: block;
+    border: none;
+    border-bottom: solid 2pt #f49120;
+    margin-bottom: 15px;
+	font-size: 15px;
+	font-family: Roboto;
+	color: #28282a;
+}
+input:focus{
+    border: solid 3pt #f49120;
+}
+p{
+	margin-left: 0px;
+}
+button{
+	float: left;
+	margin-top: 80px;
+	padding: 7.5px;
+	/* margin: 135px auto; */
+	font-family: Roboto;
+	text-align: center;
+	width: 175px;
+	color: #28282a;
+	font-weight: bold;
+	font-size: 20px;
+	text-decoration: none;
+	border-radius: 25px;
+	border: 5px solid #f49120;
+	text-shadow: 1px 1px 5px, rgba(0, 0, 0, 0.8);
+}
+button:hover {
+	/* background-color: #100A47;
+	border: 5px solid #4741C466; 
+	color: #4741C4; */
+	transition:all 0.4s ease;
+	-webkit-transform: scale(1.15);
+	-ms-transform: scale(1.15);
+	transform: scale(1.15);
+}

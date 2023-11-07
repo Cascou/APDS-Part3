@@ -1,0 +1,12 @@
+<p style="text-decoration: underline;">Government Issues</p>
+<div *ngFor="let issue of issues">
+    <p style="text-decoration: underline;">Issue ID:</p> <p> {{issue.id}} </p>
+    <p style="text-decoration: underline;">Issue Subject: </p><p>  {{issue.subject}} </p>
+    <p style="text-decoration: underline;">Issue Description:</p><p>  {{issue.description}} </p>
+    <p style="text-decoration: underline;">Issue Department:</p><p> {{issue.department}} </p>
+    <p style="text-decoration: underline;">Issue Province:</p><p> {{issue.province}} </p>
+    <p style="text-decoration: underline;">Issue Date:</p><p> {{issue.date}} </p>
+    <div style="color: red;" *ngIf="errorMessage">{{ errorMessage }}</div>
+    
+    <button (click)="ondelete(issue.id)">Delete</button>
+</div>

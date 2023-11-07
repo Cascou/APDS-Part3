@@ -1,0 +1,25 @@
+<form (submit)="onlogin(loginform)" #loginform="ngForm">
+    <input type="text"
+    ngModel name="enteredusername"
+    placeholder="Username"
+    required
+    minlength="1"
+    pattern="^(?=.*[A-Z])(?=.*\d).{8,15}$"
+    #enteredusername="ngModel"/>
+    <div style="color: red;" *ngIf="enteredusername.invalid && (enteredusername.dirty || enteredusername.touched)">Username must be between 8-15 chars, one uppercase and one number.</div>
+    <br>
+
+    <input type="password"
+    ngModel name="enteredpassword"
+    placeholder="Password"
+    required
+    minlength="1"
+    pattern="^([a-zA-Z0-9@*#]{8,15})$"
+    #enteredpassword="ngModel"/>
+    <div style="color: red;" *ngIf="enteredpassword.invalid && (enteredpassword.dirty || enteredpassword.touched)">Must be between 8-15 chars, any char is allowed.</div>
+    <div style="color: red;" *ngIf="errorMessage">{{ errorMessage }}</div>
+    <br>
+    
+    <button type="submit">Login</button>
+    <button type="button" (click)="logout()">Logout</button>
+</form>
